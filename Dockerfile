@@ -1,4 +1,4 @@
-FROM debian:11-slim
+FROM debian:12-slim
 
 
 # Update
@@ -24,4 +24,3 @@ LABEL "maintainer"="Contention <hello@contention.agency>"
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
-
