@@ -23,6 +23,10 @@ inputs:
   deploy_key:
     description: 'The private key'
     required: true
+  known_hosts:
+    description: 'known_hosts entries for hosts that publish no DNSSEC-signed SSHFP records'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
