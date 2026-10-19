@@ -12,7 +12,7 @@ chmod 600 "$SSH_PATH/deploy_key"
 # Host keys are verified against DNSSEC-signed SSHFP records. glibc clears the
 # AD bit unless trust-ad is set, which makes ssh treat every SSHFP record as
 # insecure and refuse the connection.
-RES_OPTIONS="${RES_OPTIONS:+$RES_OPTIONS }trust-ad"
+RES_OPTIONS="${RES_OPTIONS:+$RES_OPTIONS }edns0 trust-ad"
 export RES_OPTIONS
 
 
